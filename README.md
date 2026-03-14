@@ -84,31 +84,63 @@ Each genre lives in its own package under `story_writer_agent/sub_agents/`, impl
 ## Project Structure
 
 ```
+# 📂 Project Structure
+
 story_writer_agent/
 │
 ├── story_writer_agent/
-│   ├── agent.py                    # Director agent (entry point)
+│   │
+│   ├── agent.py                    # Main Director agent
 │   ├── __init__.py
-│   ├── tools/                      # Shared utilities
-│   │   ├── base_instruction.py     # Prompt templates & base instructions
-│   │   ├── critic.py               # Critic implementation and scoring utilities
-│   │   ├── genre_classifier.py     # Prompt → genre mapping logic
+│   │
+│   ├── tools/                      # Shared utilities used by agents
+│   │   ├── base_instruction.py     # Base prompt instructions
+│   │   ├── critic.py               # Critic agent logic for story evaluation
+│   │   ├── genre_classifier.py     # Detects story genre from user prompt
 │   │   └── __init__.py
-│   ├── sub_agents/                 # Genre-specific agents (each with agent.py)
+│   │
+│   ├── sub_agents/                 # Genre-specific story generator agents
+│   │   │
 │   │   ├── Romantic/
 │   │   │   ├── agent.py
 │   │   │   └── __init__.py
+│   │   │
 │   │   ├── adventure/
+│   │   │   ├── agent.py
+│   │   │   └── __init__.py
+│   │   │
 │   │   ├── drama/
+│   │   │   ├── agent.py
+│   │   │   └── __init__.py
+│   │   │
 │   │   ├── fantasy/
+│   │   │   ├── agent.py
+│   │   │   └── __init__.py
+│   │   │
 │   │   ├── historical/
+│   │   │   ├── agent.py
+│   │   │   └── __init__.py
+│   │   │
 │   │   ├── horror/
+│   │   │   ├── agent.py
+│   │   │   └── __init__.py
+│   │   │
 │   │   ├── inspiration/
+│   │   │   ├── agent.py
+│   │   │   └── __init__.py
+│   │   │
 │   │   ├── mystery/
+│   │   │   ├── agent.py
+│   │   │   └── __init__.py
+│   │   │
 │   │   ├── scifi/
+│   │   │   ├── agent.py
+│   │   │   └── __init__.py
+│   │   │
 │   │   └── thriller/
-│   └── .adk/                       # ADK configuration and metadata
-│
+│   │       ├── agent.py
+│   │       └── __init__.py
+│   │                    
 ├── config.py                       # Central configuration & constants
 ├── requirements.txt                # Python dependencies
 ├── .env                            # Environment variables (not checked in)
