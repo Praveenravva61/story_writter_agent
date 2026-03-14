@@ -4,9 +4,14 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 [![Google ADK](https://img.shields.io/badge/Framework-Google%20ADK-orange)](https://developers.google.com/)
 
-> **Story Writer Agent** is a production-oriented, multi‑agent story generation framework built with **Google ADK**.  
-> It combines a Director, Genre-specific Generators, and a Critic that iteratively refines drafts until they meet quality requirements.
+**Story Writer Agent** is a modular **multi-agent storytelling system** built using the **Google Agent Development Kit (ADK)**.  
+It generates high-quality stories across multiple genres through specialized **genre sub-agents** and an automated **critic feedback loop**.
 
+The main **Story Writer Agent** processes user prompts, identifies the appropriate genre, and routes the request to a dedicated generator agent designed for that narrative style. Each sub-agent applies genre-specific prompting strategies to produce structured and engaging story drafts.
+
+A **Critic Agent** then evaluates the generated output based on narrative quality, coherence, creativity, and genre consistency. If the story does not meet the required standards, the system triggers an **iterative refinement loop**, allowing the generator to improve the story until it reaches the desired quality.
+
+This architecture demonstrates how **collaborative AI agents can coordinate through feedback-driven workflows** to produce scalable, extensible, and high-quality creative content.
 ---
 
 ## Table of Contents
